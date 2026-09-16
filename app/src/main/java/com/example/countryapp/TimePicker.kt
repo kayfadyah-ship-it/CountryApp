@@ -1,28 +1,29 @@
 package com.example.countryapp
 
 import android.app.Dialog
-import android.app.DialogFragment
 import android.app.TimePickerDialog
 import android.os.Bundle
+import android.text.format.DateFormat
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.fragment.app.DialogFragment
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import java.text.DateFormat
 import java.util.Calendar
 
-class TimePicker: DialogFragment() {
+class TimePicker : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val calendar = Calendar.getInstance()
         val hourOfDay = calendar.get(Calendar.HOUR_OF_DAY)
         val minute = calendar.get(Calendar.MINUTE)
-        return TimePickerDialog(
-            requireActivity(),
-            activity as TimePickerDialog.OnTimeSetListener,
-            hourOfDay,
 
+        return TimePickerDialog(
+            requireContext(),
+            activity as? TimePickerDialog.OnTimeSetListener,
+            hourOfDay,
             minute,
-            DateFormat.is24HourFormat(activity)
+            DateFormat.is24HourFormat(requireContext())
         )
     }
 }
