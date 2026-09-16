@@ -1,0 +1,17 @@
+<resources>
+    <array name="provinces">
+        <item>Bali</item>
+        <item>Jawa Barat</item>
+        <item>Jawa Tengah</item>
+        <item>Jawa Timur</item>
+        <item>Yogyakarta</item>
+        <item>DKI Jakarta</item>
+        <item>Banten</item>
+        <item>Sulawesi Utara</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Selatan</item>
+        <item>Sulawesi Tenggara</item>
+        <item>Sulawesi Barat</item>
+        <item>Gorontalo</item>
+    </array>
+</resources>
